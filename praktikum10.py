@@ -1,0 +1,15 @@
+def change(a,i,j):
+    t = a[i]
+    a[i] = a[j]
+    a[j] = t
+def bubble_sort(a,n):
+    for i in range (n-1):
+        if a[i] > a[i+1]:
+            change(a,i,i+1)
+        if n - 1 > 1:
+            bubble_sort(a,n-1)
+            
+a = [8,10,6,50,-2,44]
+bubble_sort(a, len(a))
+print("List yang telah disorting")
+print(a)
